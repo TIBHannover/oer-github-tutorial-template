@@ -1,21 +1,40 @@
 ---
-name: "My OER Course"
+'@context': http://schema.org/
+creativeWorkStatus: Published
 creator:
-  - givenName: "Max"
-    familyName: "Mustermann"
-  - givenName: "Maxi"
-    familyName: "Mustermann"
-publisher:
-  givenName: "Max"
-  familyName: "Mustermann"
-keywords:
-  - "Geometry"
-  - "Pythagoras"
-  - "Mathematics"
-description: "Draft for a course"
-inLanguage: "en"
-version: 1.0
-license: "https://creativecommons.org/publicdomain/zero/1.0/"
-thumbnailUrl: http://placehold.it/100x100
-learningResourceType: "Course"
-creativeWorkStatus: "Draft" # Incomplete, Draft, Published
+- '@type': Person
+  affiliation:
+    id: https://ror.org/04aj4c181
+    name: Technische Informationsbibliothek (TIB) - Leibniz-Informationszentrum Technik
+      und Naturwissenschaften - Universitätsbibliothek
+    type: Organization
+  familyName: Matter
+  givenName: Sophie
+  type: Person
+dateModified: '2023-10-18T10:31:46Z'
+description: This tutorial helps you create OER using GitHub and our template.
+educationalLevel:
+- id: https://w3id.org/kim/educationalLevel/level_A
+  prefLabel:
+    de: Hochschule
+    en: University
+id: https://tibhannover.github.io/oer-github-tutorial-template/
+inLanguage:
+- en
+learningResourceType:
+- id: https://w3id.org/kim/hcrt/course
+  prefLabel:
+    da: Kursus
+    de: Kurs
+    en: Course
+    es: Curso
+    fi: Kurssi
+    fr: Cours
+    nl: Cursus
+    uk: Курс
+license:
+  id: https://creativecommons.org/licenses/by/4.0/deed.de
+name: OER GitHub Tutorial
+publisher: []
+url: https://github.com/TIBHannover/oer-github-tutorial-template
+datePublished: '2023-10-18'
