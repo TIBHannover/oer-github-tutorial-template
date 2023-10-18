@@ -21,6 +21,8 @@ educationalLevel:
 id: https://tibhannover.github.io/oer-github-tutorial-template/
 inLanguage:
 - en
+image: >-
+  https://raw.githubusercontent.com/TIBHannover/oer-github-tutorial/main/img/preview.png
 learningResourceType:
 - id: https://w3id.org/kim/hcrt/course
   prefLabel:
