@@ -22,6 +22,8 @@ This tutorial guides you through the creation of open educational resources (OER
   * [Working offline](#working-offline)
   * [Immediate update in OERSI](#immediate-update-in-oersi)
   * [Different formats](#different-formats)
+* [Troubleshooting](#troubleshooting)
+* [FAQ](#faq)
 
 > After completing this tutorial, you will have an automatically generated OER with your own content and metadata, published on GitHub for free and ready to be put into our OER search index [OERSI](https://oersi.org).
 
@@ -354,50 +356,79 @@ You can also set custom links like this:
 Now the link to this section is `#custom-id`.
 
 ### Git
-> This section only gives a brief overview of Git.
-> If you want to learn more about it, check out the free online [Pro Git](https://git-scm.com/book/en/v2) textbook.
+
+> Here, you will only find a very brief overview of Git.
+> If you want to learn more about Git, You can find an abundance of free tutorials, books and videos about Git, how it works and how to use it online.
+> We highly recommend to check out the free online open textbook [Pro Git](https://git-scm.com/book/en/v2).
 
 ### What is Git and why should you use it?
 Have you ever worked on different versions of a document, or even with different people?
 Then you likely know how hard it is to keep track of changes, and how easy to accidentally overwrite them.
-Git is a tool that helps with that. It is a so-called *version control system*.
+Git is a tool that helps with that. **It is a so-called *version control system*.**
 To learn more about version control, you can check out the [Version Control section of the Pro Git book](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control).
 
-### How does it work?
-You make changes to your files locally and eventually publish them online.
-So after you have made your changes, you "commit" these changes and "push" them to your repository.
+> By playing the video you agree to YouTube retrieving and storing information about you in the form of cookies.
 
-![The lifecycle of the status of your files](img/pro-git-git-basics.png "CC-BY-SA-NC Pro Git, https://git-scm.com/book/en/v2")
+<center>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hwP7WQkmECE?si=I9-DjEz3Z7tTf0Hz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+### How Git works
+Git is used to keep track of changes of the files inside your repository.
+Once you add a file to git, it is tracked.
+Git now automatically detects whether the file was modified or not.
+You can then stage files and add them to a commit.
+All these commits form your history, you can see which changes were made when by whom and you can even revert files back to specific commits.
+
+It is also possible to have multiple branches.
+You start out with one branch, usually called the **main** or **master** branch.
+However, at any given time from any branch, you can create a new branch.
+There, you can change files without anything on the main branch being affected by it - you are basically working in parallel, as if you copied your entire repository some other place, but much more efficient.
+Plus you can easily switch between branches and merge changes of one branch into another.
+This makes it easy to not only have one stable version on the main branch while changing things on other branches, but also to collaborate with others and not have each other's changes overwrite anything.
+
+Working on different branches and eventually merging them can lead to merge conflicts.
+Merge conflicts arise when there are two changes to the same lines of a file.
+They are resolved by choosing which changes to keep or by bringing them together manually.
+
+> By playing the video you agree to YouTube retrieving and storing information about you in the form of cookies.
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/e9lnsKot_SQ?si=q-Ezd3bf5Kcdrm1f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 ### Working offline
-> If you want to work offline, using some kind of text editor (similar to working with Word on documents), some necessary steps and background knowledge are required.
+> In this tutorial, we work online the entire time. We create all files directly on GitHub.
+> Another way of working is to work offline in a local folder on your computer and *then* uploading your files to a git repository.
+> This, however, requires some knowledge about Git and a text editor.
 
 Since we are working with `Git` (see [Git section](#git) for more information), and want to publish our content on `GitHub` (see [GitHub section](#github)), we have to find a way to bring our offline work online. For this, you should check out the [Git section](#git).
 
 ### Editors
-First off, let's talk about editors.
-
-Of course, you know text editors like *Word* or *LibreOffice*.
-However, for the automatic output generation used in this template, we need *plain text* that is easily readable for machines.
+You know text editors like Word or LibreOffice.
+However, we want to use *plain text* that is readable for machines.
 This is why we are working with [Markdown](#markdown-1) to format our *plain text*.
 
 There are a lot of editors that help you with writing text using the Markdown syntax.
-On of the ways they help is by showing a rendered preview as you type.
+They use syntax highlighting to better understand the structure of Markdown and can provide a live preview as you type.
 
 ![Editor](img/vscode.png "VSCodium, the open source version of the popular editor VSCode")
 
 The editor you can see in the screenshot is called **VSCodium**, which is the open source version of a popular editor **VSCode** by Microsoft.
-In this editor, you can install lots of plugins that can help you out.
+In this editor, you can install plugins that can help you. For example, you can install a plugin that can render a preview of your LiaScript course in your browser without having to upload your changes.
 It also has a built-in Git functionality which helps you publish your changes.
 
 ### Put your changes online
-Your local changes have to be uploaded.
-This brings some possible challenges.
+You *could* upload your locally edited files to GitHub, either by simply uploading this file or by editing the file you want to change and replacing that file's content with your local content.
 
-You could simply copy the whole file content, click on edit on the file in the repository that you want to update, delete that file's contents, paste your new content and commit those changes.
-But that is rather tedious and unnecessary. Neither is it the way Git is supposed to be used.
+The better way, however, is to use Git for this - either by using your editor's built-in Git functionality or by using the Git program itself.
+Please check out the abundance of free online resources on how to do this.
 
-We will stick to the *VSCodium*/*VSCode* editor for this example.
+> By playing the video you agree to YouTube retrieving and storing information about you in the form of cookies.
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/i_23KUAEtUM?si=vXGoQLqXS0tbyV4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 ### Immediate update in OERSI
 > Your OER will be automatically inserted into the [OERSI](https://oersi.org) if you fulfill the requirements listed in the [insert your OER into OERSI section](#insert-your-oer-in-oersi). The resources are updated each night. If you want to see **immediate** changes, you can use the (experimental) record updater.
@@ -413,13 +444,155 @@ Then, click on update. Your OER should now be updated in the OERSI.
 > After following this tutorial, we have different output formats like a HTML version, a PDF version and so on.
 > We could, however, generate all kinds of different formats, for example a course format like this tutorial.
 
-Using this template is not the only option to host OER using GitHub.
-For example, this tutorial runs using `LiaScript`.
+Below you find a short list of several possible formats your OER could use. <br><br>
 
-Below you find a short list of several possible formats your OER could use:
+<h3>[Markdown documents template](https://github.com/TIBHannover/markdown-documents-template)</h3>
 
-* [Markdown documents template](https://github.com/TIBHannover/markdown-documents-template) (as shown in this tutorial)
-* [Markdown slides template](https://github.com/TIBHannover/markdown-slides-template)
-* [LiaScript](https://liascript.github.io) (which this tutorial is made with)
-* [Static Site Generators](https://github.com/collections/static-site-generators)
-* [JupyterBooks](https://jupyterbook.org/en/stable/intro.html)
+This is the template that is described in this tutorial.
+As you know by now, it takes your Markdown files, puts them together and generates different formats from them.
+These formats are linked to and can be downloaded from the landing page that is generated using GitHub Actions and GitHub Pages.
+
+Pro:
+
++ Easy setup with our template
++ Automatic generation of different formats
++ Can include interactive elements
++ Always have the newest changes online
++ GitHub automatically tracks changes made to your files
++ Easy collaboration with others on GitHub
++ Customizable with CSS
+
+Con:
+
+- Needs a GitHub account
+- Customizing can be tricky
+
+
+<h3>[Markdown slides template](https://github.com/TIBHannover/markdown-slides-template)</h3>
+
+The Markdown slides template is very similar to the Markdown documents template from this tutorial.
+But instead of creating a single text document, the slides template creates several slides.
+For this, you create one Markdown file for one set of slides and the template generates the slides in both HTML and PDF format and shows a list of all generated slides together with preview images in a GitHub Page.
+
+Pro:
++ Easy automatically generated slides in two formats
++ Easy setup with our template 
++ Automatic up to date overview page
++ Always have the newest changes online
++ Automatically tracks changes made to your files
++ Easy collaboration with others
+
+Con:
+- Slides are only partly customizable
+- Needs a GitHub account
+
+<h3>[LiaScript](https://liascript.github.io)</h3>
+
+LiaScript takes a markdown file and automatically generates a course format from it.
+The tutorial you are currently viewing is actually made with LiaScript!
+Or rather, the Markdown file this tutorial is written in is being interpreted by LiaScript, which therewith generated this course.
+So all you really need is a Markdown file.
+
+Pro:
++ Super easy to set up, just need one markdown file somewhere on the internet! 
++ Runs everywhere 
++ Large number of elements you can use like graphs, quizzes, ...
++ No installation, everything happens live & online
++ Easy to click through the different sections
++ Automatic translation into many different languages
++ Interactive elements and extended Markdown can be used
++ Responsive website
+
+Con:
+- Only online, no download
+- Depends on one single service
+- Only one Markdown file at a time
+
+<h3>[Static Site Generators](https://github.com/collections/static-site-generators)</h3>
+
+A static site generator generates a static site.
+Typically, it will be possible to also write your content using Markdown, but at the same time, you will be able to edit your layout and include more elements yourself which the static site generator then uses to create your web page.
+Of course, this requires some basic knowledge about HTML, CSS and the static site generator you are using.
+You should also be familiar with the command line or using GitHub Actions yourself.
+
+Pro:
++ Creates a lightweight web page
++ Very customizable
+
+Con:
+- Not for complete beginners - you need some knowledge about web development
+- Takes longer to get a first version running / more configuration and technical know-how necessary
+
+<h3>[JupyterBooks](https://jupyterbook.org/en/stable/intro.html)</h3>
+
+Jupyter Book is a free and open source tool to create online books.
+You can create sections and subsections that you can click through.
+They are added to a table of contents, which can be viewed in a sidebar or accessed via a menu.
+It is also possible to include executable content.
+Moreover, you can download your book in both Markdown and PDF format.
+You can start out with a template supplied by the software itself.
+
+Pro:
++ Creates online books with sections and table of contents to click through
++ Allows lots of configuration and structuring
++ Supplies download as Markdown and PDF
++ Can include executable content
+
+Con:
+- Not for complete beginners (you will need to run commands from the command line or create a GitHub Action)
+- Configuration is done via config files, which can be tricky to learn if you are unfamiliar with coding
+
+## Troubleshooting
+
+Something does not work?
+Maybe you find your issue right here.
+
+### I do not see my changes
+
+You have added your content and your metadata but can not see your changes in your landing page and generated documents?
+Following these steps might help you.
+
+1. Delete your cache and reload your page/document
+
+Often, the old version of the page is still loaded in your browser's cache.
+If you reload the page or document by hitting `Ctrl + F5` together, you can reload your page while deleting the cache of that page.
+You can also open your page or document in a new private tab or window, as the browser usually does not use its cache there.
+
+2. Check your file names and content
+
+Check if your file name contains characters like **spaces**. These are not allowed and cause the document generation to break.
+
+Also, ensure that there are no special characters like emojis or other unicode characters in your documents. Our document processor does not understand these characters, which also leads to breaking the document generation.
+
+3. Check your media
+
+Sometimes, images or videos can cause the document generation to break.
+Usually, this happens when you use an unsupported format. Stick to widespread formats like `png` and `jpg` to be sure.
+
+## FAQ
+
+### Can I upload non-text files like PDF files?
+Yes, you can! Git however won't be able to track changes made to those files, it can only track _that_ it was changed.
+
+### How can I change how images are displayed?
+You can change image size, placement and more by using HTML-tags. HTML is, like Markdown, a markup language, basically converting plain text into formatted output.
+
+**Change image size**:
+
+`<img src="path/to/image.png" alt="Image description" style="width:100px"; />`
+
+The **src** contains the path to your image, the **alt** contains an image description, and the **style** contains the information about the image size. Here, we have set the **width** to **100 pixels**. You can also set the height (but note that setting a fixed width *and* height that does not match the original ratio of the image can skew it), and of course, change the size how you want.
+
+**Make text float around an image**:
+
+`<img src="path/to/image.png" alt="Image description" style="float: left; margin: 0 20px 20px 0;" />`
+
+Again, **src** contains the path to the image and **alt** its description. Now in the **style** tag, you find two directions: `float: left;` places your image on the left and allows other content like text to *float* around it. The tag `margin: 0 20px 20px 0;` is about spacing: you can set a margin around your image (or element in general), leaving that space blank. Here, the values for the margin are sorted top, right, bottom, left. So in this case, there is a margin of 20 pixels to the right and to the bottom. This prevents the text to directly "touch" your image, making it easier to read.
+
+### Why are the direct paths to my files different?
+You may have encountered links containing `https://raw.githubusercontent.com/`. If you are wondering what this means and why GitHub changes your URL this way, the reason is the following:
+
+When you go through your repository's files in GitHub, you see them embedded in the GitHub web page, which lets you do several things like edit, delete, show its history and so on. So when you have a link to this file, the link points to this web page and not to the file itself (which is called the *raw* file). If you want to access the file *only*, so the raw file, GitHub allows you to do that by changing the URL to `https://raw.githubusercontent.com/`.
+
+### How can I create a new folder?
+You can not create an empty folder. This means you have to add files in GitHub *in* that new folder. Either create a new file and change the path to that new folder (i.e. instead of creating a new file `file.md`, write it with a new folder like `newfolder/file.md`, a new folder will be automatically created) or upload a non-empty folder.

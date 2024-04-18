@@ -11,7 +11,8 @@ creator:
   familyName: Matter
   givenName: Sophie
   type: Person
-dateModified: '2023-10-18T10:31:46Z'
+dateModified: '2024-04-18T10:40:26Z'
+datePublished: '2023-10-18'
 description: This tutorial helps you create OER using GitHub and our template.
 educationalLevel:
 - id: https://w3id.org/kim/educationalLevel/level_A
@@ -19,10 +20,9 @@ educationalLevel:
     de: Hochschule
     en: University
 id: https://tibhannover.github.io/oer-github-tutorial-template/
+image: https://raw.githubusercontent.com/TIBHannover/oer-github-tutorial-template/main/img/preview.png
 inLanguage:
 - en
-image: >-
-  https://raw.githubusercontent.com/TIBHannover/oer-github-tutorial/main/img/preview.png
 learningResourceType:
 - id: https://w3id.org/kim/hcrt/course
   prefLabel:
@@ -36,7 +36,6 @@ learningResourceType:
     uk: Курс
 license:
   id: https://creativecommons.org/licenses/by/4.0/deed.de
-name: OER GitHub Tutorial
+name: OER GitHub Tutorial - Template
 publisher: []
 url: https://github.com/TIBHannover/oer-github-tutorial-template
-datePublished: '2023-10-18'
