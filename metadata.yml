@@ -13,7 +13,7 @@ creator:
   type: Person
 dateModified: '2024-04-18T10:40:26Z'
 datePublished: '2023-10-18'
-description: Generate OER in different output formats: HTML, PDF, EPUB and a landing page. The PDF and EPUB formats are downloadable. The landing page and HTML version are hosted on GitHub.
+description: 'Generate OER in different output formats: HTML, PDF, EPUB and a landing page. The PDF and EPUB formats are downloadable. The landing page and HTML version are hosted on GitHub.'
 educationalLevel:
 - id: https://w3id.org/kim/educationalLevel/level_A
   prefLabel:
